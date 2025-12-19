@@ -109,7 +109,14 @@ export default function HomePage() {
                   tweak some logic, add an option.
                 </p>
                 <p>
-                  In fact, these kinds of structured changes are <strong>ideal for AI assistance</strong> — 
+                  There&apos;s also a big simplification: <strong>everything lives in one codebase</strong>. 
+                  Today, quiz changes often touch two separate repos with shared data structures — that 
+                  means coordinating deployments, keeping things in sync, and more chances for things to 
+                  break. With this approach, the quiz definition and the UI that renders it are in the 
+                  same place. One change, one deploy, done.
+                </p>
+                <p>
+                  These kinds of structured changes are also <strong>ideal for AI assistance</strong> — 
                   an LLM could likely handle most routine updates with minimal human intervention.
                 </p>
                 <p>
