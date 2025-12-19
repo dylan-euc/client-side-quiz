@@ -11,13 +11,141 @@ export default function HomePage() {
       <header className="bg-white border-b border-gray-200 px-6 py-6">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-2xl font-bold text-gray-900">Client-Side Quiz POC</h1>
-          <p className="text-gray-600 mt-1">
-            Flow definitions in code • PR-based changes
-          </p>
         </div>
       </header>
 
       <div className="max-w-4xl mx-auto px-6 py-8 space-y-10">
+        {/* FAQ */}
+        <section>
+          <div className="mb-4">
+            <h2 className="text-lg font-semibold text-gray-900">FAQ</h2>
+          </div>
+          <div className="space-y-3">
+            <details className="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+              <summary className="flex items-center justify-between px-5 py-4 cursor-pointer hover:bg-gray-50 transition-colors">
+                <span className="font-medium text-gray-900">What is this?</span>
+                <svg
+                  className="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-5 pb-5 pt-2 border-t border-gray-100 text-sm text-gray-600">
+                <p>
+                  Think of this as a <strong>read-only version of the quiz admin</strong>. 
+                  You can browse all quizzes, see every question, preview how they look, 
+                  and understand the branching logic — but you can&apos;t edit anything here.
+                </p>
+              </div>
+            </details>
+
+            <details className="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+              <summary className="flex items-center justify-between px-5 py-4 cursor-pointer hover:bg-gray-50 transition-colors">
+                <span className="font-medium text-gray-900">How do quizzes get updated?</span>
+                <svg
+                  className="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-5 pb-5 pt-2 border-t border-gray-100 text-sm text-gray-600">
+                <p>
+                  Instead of editing in an admin panel, quiz changes go through a 
+                  <strong> formal review process</strong>. A developer makes the change, 
+                  it gets reviewed by the team, and then it&apos;s deployed — just like 
+                  any other product update. This means every change is tracked and approved.
+                </p>
+              </div>
+            </details>
+
+            <details className="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+              <summary className="flex items-center justify-between px-5 py-4 cursor-pointer hover:bg-gray-50 transition-colors">
+                <span className="font-medium text-gray-900">Where do customers see these quizzes?</span>
+                <svg
+                  className="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-5 pb-5 pt-2 border-t border-gray-100 text-sm text-gray-600 space-y-2">
+                <p>
+                  Customer-facing quizzes would be hosted at specific URLs in the main app 
+                  (e.g. <code className="bg-gray-100 px-1.5 py-0.5 rounded text-xs">/quiz/weight-loss</code>). 
+                  These are the screens customers actually interact with.
+                </p>
+                <p>
+                  The pages you&apos;re viewing right now are an <strong>internal tool</strong> — 
+                  they&apos;d live on the same domain but at routes customers would never visit. 
+                  Think of it as a backstage view for the team.
+                </p>
+              </div>
+            </details>
+
+            <details className="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+              <summary className="flex items-center justify-between px-5 py-4 cursor-pointer hover:bg-gray-50 transition-colors">
+                <span className="font-medium text-gray-900">Will this make quiz updates slow?</span>
+                <svg
+                  className="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-5 pb-5 pt-2 border-t border-gray-100 text-sm text-gray-600 space-y-2">
+                <p>
+                  Not necessarily. With a dedicated growth engineering team, changes can move quickly. 
+                  The config-driven approach means most updates are straightforward — change a question, 
+                  tweak some logic, add an option.
+                </p>
+                <p>
+                  In fact, these kinds of structured changes are <strong>ideal for AI assistance</strong> — 
+                  an LLM could likely handle most routine updates with minimal human intervention.
+                </p>
+                <p>
+                  The tradeoff? This approach <strong>drastically reduces the risk of breaking things</strong>. 
+                  Every change goes through code review, so subtle bugs or logic errors get caught before 
+                  they reach customers.
+                </p>
+              </div>
+            </details>
+
+            <details className="group bg-white rounded-xl border border-gray-200 overflow-hidden">
+              <summary className="flex items-center justify-between px-5 py-4 cursor-pointer hover:bg-gray-50 transition-colors">
+                <span className="font-medium text-gray-900">Is this definitely a good idea?</span>
+                <svg
+                  className="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-5 pb-5 pt-2 border-t border-gray-100 text-sm text-gray-600 space-y-2">
+                <p>
+                  Honestly? <strong>Not sure yet.</strong> But I do think it&apos;ll be simpler to build 
+                  and maintain than a full admin CMS.
+                </p>
+                <p>
+                  I&apos;m keen to see where this approach breaks down — what edge cases make it painful, 
+                  what workflows don&apos;t fit the model. That&apos;s partly what this POC is for.
+                </p>
+              </div>
+            </details>
+          </div>
+        </section>
+
         {/* Available Flows */}
         <section>
           <div className="mb-4">
