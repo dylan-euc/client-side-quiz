@@ -2,6 +2,8 @@
 
 A static quiz engine where flow definitions live entirely in TypeScript.
 
+**Live demo:** https://dylan-euc.github.io/client-side-quiz/
+
 ## Quick Start
 
 ```bash
