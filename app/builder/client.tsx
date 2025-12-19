@@ -4,7 +4,7 @@ import { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { questionTypeMeta } from '@/lib/flows/question-types/metadata';
 import { QuestionRenderer } from '@/lib/flows/components/question-renderer';
-import { Step } from '@/lib/flows/engine/types';
+import type { Step } from '@/lib/flows/engine/types';
 
 // ============================================================================
 // Types
@@ -312,16 +312,17 @@ function PreviewPanel({ step, value, onChange }: { step: BuilderStep | null; val
     );
   }
 
-  const fullStep: Step = {
+  // Cast to Step - builder uses dynamic shortcodes not in the union type
+  const fullStep = {
     id: step.id,
-    type: step.type as Step['type'],
+    type: step.type,
     shortcode: step.shortcode,
     question: step.question,
     description: step.description,
     options: step.options,
     validation: step.validation,
     next: step.next || 'next',
-  };
+  } as Step;
 
   return (
     <div className="bg-white rounded-xl p-6 max-w-md mx-auto">

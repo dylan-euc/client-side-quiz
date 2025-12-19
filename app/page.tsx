@@ -64,8 +64,7 @@ export default function HomePage() {
                 <p>
                   Instead of editing in an admin panel, quiz changes go through a 
                   <strong> formal review process</strong>. A developer makes the change, 
-                  it gets reviewed by the team, and then it&apos;s deployed — just like 
-                  any other product update. This means every change is tracked and approved.
+                  it gets reviewed by the team, and then it&apos;s deployed. This means every change is tracked and approved.
                 </p>
               </div>
             </details>
