@@ -9,8 +9,14 @@ export default function HomePage() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white border-b border-gray-200 px-6 py-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto flex items-center justify-between">
           <h1 className="text-2xl font-bold text-gray-900">Client-Side Quiz POC</h1>
+          <Link
+            href="/builder"
+            className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Open Builder
+          </Link>
         </div>
       </header>
 
@@ -114,6 +120,11 @@ export default function HomePage() {
                   means coordinating deployments, keeping things in sync, and more chances for things to 
                   break. With this approach, the quiz definition and the UI that renders it are in the 
                   same place. One change, one deploy, done.
+                </p>
+                <p>
+                  And a visual builder <strong>can still exist</strong> — it just outputs config files 
+                  instead of writing to a database. Non-technical team members could use it to draft 
+                  changes, then export the config for an engineer to review and merge. Best of both worlds.
                 </p>
                 <p>
                   These kinds of structured changes are also <strong>ideal for AI assistance</strong> — 
